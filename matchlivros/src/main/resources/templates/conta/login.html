@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmls:th="http://thymeleaf.org"
+	  xmls:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+	<html xmlns:th="http://www.thymeleaf.org" lang="PT-BR">
+<meta charset="UTF-8">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Login</title>
+
+<!--     Fonts and icons     -->
+<link rel="icon" type="image/png" href="../../img/icon.png" th:href="@{/img/icon.png}">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+<!-- CSS Files -->
+  <script src="../../js/dropzone-5.7.0/dist/dropzone.js"></script>
+
+  <link rel="stylesheet" href="../../js/dropzone-5.7.0/dist/dropzone.css"/>
+
+<link rel="stylesheet" href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+<link href="../../css/now-ui-kit.css?v=1.3.0" rel="stylesheet" th:href="@{/css/now-ui-kit.css?v=1.3.0}" />
+<link href="../../css/main.css" rel="stylesheet" th:href="@{/css/main.css}" />
+<link href="../../css/all.min.css" rel="stylesheet" th:href="@{/css/all.min.css}">  
+</head>
+<body class="index-page sidebar-collapse">
+	<nav class="navbar bg-primary fixed-top navbar-principal">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="https://demos.creative-tim.com/now-ui-kit/index.html" rel="tooltip" title="Encontre seu livro ideal" data-placement="bottom" target="_blank">
+          <img src="../../img/logo-mdl.png">Match de livros
+        </a>
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <div class="input-group main-search">
+            <input type="text" class="form-control bg-light border-0 small input-search ml-5" placeholder="Pesquisar livros..." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary btn-search" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end nav-i" id="navigation" data-nav-image="../../img/blurred-image-1.jpg">
+        <div class="search-books">
+
+        </div>
+       
+      </div>
+    </div>
+    
+  </nav>
+  
+  <!-- End Navbar -->
+  
+  <nav class="navbar navbar-expand-lg navbar-categories">
+    <div class="container">
+      <div class="navbar-translate">
+        <div></div>
+        <button class="navbar-toggler-c navbar-toggler-c" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar navbar-toggler-black top-bar"></span>
+          <span class="navbar-toggler-bar navbar-toggler-black middle-bar"></span>
+          <span class="navbar-toggler-bar navbar-toggler-black bottom-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse nav-c" id="navigation">
+        <ul class="navbar-nav nav-categories"> 
+          <li class="nav-item dropdown mr-5">
+            <a class="nav-link dropdown-toggle text-muted" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Literatura</a>
+              <a class="dropdown-item" href="#">Técnicos e profissionais</a>
+              <a class="dropdown-item" href="#">Outros idiomas</a>
+              <a class="dropdown-item" href="#">Desenvolvimento pessoal</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-5">
+            <a class="nav-link dropdown-toggle text-muted" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Trocas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Histórico de trocas</a>
+              <a class="dropdown-item" href="#">Trocas solicitadas</a>
+              <a class="dropdown-item" href="#">Trocas em andamento</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-5">
+            <a class="nav-link dropdown-toggle text-muted" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Doações
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Histórico de doações</a>
+              <a class="dropdown-item" href="#">Doações solicitadas</a>
+              <a class="dropdown-item" href="#">Doações em andamento</a>
+            </div>
+          </li>
+          <li class="nav-item mr-5">
+            <a class="nav-link" href="https://www.creative-tim.com/product/now-ui-kit-pro" target="_blank">
+              <p class="text-muted">Meus livros</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+      <div class="collapse navbar-collapse nav-c justify-content-end" id="navigation">
+        <ul class="navbar-nav nav-categories"> 
+          <li class="nav-item dropdown mr-3">
+            <a class="nav-link dropdown-toggle text-muted" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="now-ui-icons users_circle-08"></i>  
+              <p class="text-muted">Username</p>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Meu perfil</a>
+              <a class="dropdown-item" href="#">Favoritos</a>
+              <a class="dropdown-item" href="#">Configurações</a>
+              <a class="dropdown-item" href="#">Sair</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-2" style="margin-top: -4%;">
+            <a href="#" class="btn btn-primary btn-icon btn-round btn-actions">
+              <i class="now-ui-icons ui-2_chat-round"></i></a> 
+          </li>
+          <li class="nav-item dropdown mr-2" style="margin-top: -4%;">
+            <a href="#" class="btn btn-primary  btn-icon btn-round btn-actions">
+              <i class="now-ui-icons ui-1_bell-53"></i></a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+	<div class="container">
+
+		<h3>Login</h3>
+		<form action="/" method="post" class="form-signin">
+			<div class="form-group">
+				<div class="col-md-9">
+					<input type="text" class="form-control" placeholder="E-mail" name="email">
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<div class="col-md-9">
+					<input type="password" class="form-control" placeholder="Senha" name="senha">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Login</button>
+			</div>
+		
+			<div class="form-group">
+				<div class="col md-9">
+					<div class="alert alert-danger" role="alert" th:if="${param.error}">
+						Não foi possível fazer o login
+					</div>
+				</div>
+			</div>
+		
+			<div class="form-group">	
+				<span>Nao possui conta? <a href="">Registre-se Aqui!</a></span>
+			
+			</div>
+			
+		</form>
+		
+		
+		
+
+
+
+	</div>
+
+
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
